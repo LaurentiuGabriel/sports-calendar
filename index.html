@@ -21,6 +21,7 @@
     --fe: #17C2FF;
     --wec: #22C55E;
     --gt: #B072FF;
+    --wrc: #4C6FFF;
     --box: #F5C518;
 
     --radius: 16px;
@@ -390,7 +391,7 @@
   <header class="hero">
     <div>
       <h1 class="hero-title">The <span class="year">2026</span> Grid<br>Racing &amp; Boxing Calendar</h1>
-      <p class="hero-sub">Every round of F1, MotoGP, Formula E, the WEC (incl. Le Mans), GT World Challenge Europe — plus the biggest nights in boxing. Tap any day for details.</p>
+      <p class="hero-sub">Every round of F1, MotoGP, Formula E, the WEC (incl. Le Mans), GT World Challenge Europe and the WRC — plus the biggest nights in boxing. Tap any day for details.</p>
     </div>
     <div class="hero-stats" id="heroStats"></div>
   </header>
@@ -435,6 +436,7 @@ const SERIES = {
   fe:     { name: "Formula E",           short: "FE",     color: "#17C2FF" },
   wec:    { name: "WEC / Le Mans",       short: "WEC",    color: "#22C55E" },
   gt:     { name: "GT World Challenge",  short: "GTWC",   color: "#B072FF" },
+  wrc:    { name: "World Rally (WRC)",   short: "WRC",    color: "#4C6FFF" },
   box:    { name: "Boxing",              short: "Boxing", color: "#F5C518" },
 };
 
@@ -528,6 +530,22 @@ const EVENTS = [
   { d:"2026-09-20", s:"gt", t:"Zandvoort",            loc:"Netherlands", tag:"Sprint · 18–20 Sep" },
   { d:"2026-10-04", s:"gt", t:"Barcelona-Catalunya",  loc:"Spain", tag:"Sprint · 2–4 Oct" },
   { d:"2026-10-18", s:"gt", t:"Portimão",             loc:"Algarve Circuit, Portugal", tag:"Endurance · 16–18 Oct" },
+
+  // ---------------- FIA World Rally Championship (2026) ----------------
+  { d:"2026-01-25", s:"wrc", t:"Rallye Monte-Carlo",   loc:"Gap, France · Monaco", tag:"Mixed · 22–25 Jan" },
+  { d:"2026-02-15", s:"wrc", t:"Rally Sweden",         loc:"Umeå, Sweden", tag:"Snow · 12–15 Feb" },
+  { d:"2026-03-15", s:"wrc", t:"Safari Rally Kenya",   loc:"Nairobi &amp; Nakuru County, Kenya", tag:"Gravel · 12–15 Mar" },
+  { d:"2026-04-12", s:"wrc", t:"Croatia Rally",        loc:"Rijeka, Croatia", tag:"Tarmac · 9–12 Apr" },
+  { d:"2026-04-26", s:"wrc", t:"Rally Islas Canarias", loc:"Las Palmas, Gran Canaria", tag:"Tarmac · 23–26 Apr" },
+  { d:"2026-05-10", s:"wrc", t:"Rally de Portugal",    loc:"Matosinhos, Porto", tag:"Gravel · 7–10 May" },
+  { d:"2026-05-31", s:"wrc", t:"Rally Japan",          loc:"Toyota City, Aichi", tag:"Tarmac · 28–31 May" },
+  { d:"2026-06-28", s:"wrc", t:"Acropolis Rally",      loc:"Loutraki, Greece", tag:"Gravel · 25–28 Jun" },
+  { d:"2026-07-19", s:"wrc", t:"Rally Estonia",        loc:"Tartu, Estonia", tag:"Gravel · 16–19 Jul" },
+  { d:"2026-08-02", s:"wrc", t:"Rally Finland",        loc:"Jyväskylä, Finland", tag:"Gravel · 30 Jul–2 Aug" },
+  { d:"2026-08-30", s:"wrc", t:"Rally del Paraguay",   loc:"Encarnación, Itapúa", tag:"Gravel · 27–30 Aug" },
+  { d:"2026-09-13", s:"wrc", t:"Rally Chile",          loc:"Concepción, Biobío", tag:"Gravel · 10–13 Sep" },
+  { d:"2026-10-04", s:"wrc", t:"Rally Italia Sardegna", loc:"Alghero, Sardinia", tag:"Gravel · 1–4 Oct" },
+  { d:"2026-11-14", s:"wrc", t:"Rally Saudi Arabia",   loc:"Jeddah, Saudi Arabia", tag:"Gravel · 11–14 Nov · Finale" },
 
   // ---------------- Boxing — major cards (2026) ----------------
   { d:"2026-06-27", s:"box", t:"Zayas vs. Ennis",     loc:"Unified super-welterweight titles" },
