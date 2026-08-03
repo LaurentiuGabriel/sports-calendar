@@ -22,6 +22,7 @@
     --wec: #22C55E;
     --gt: #B072FF;
     --wrc: #4C6FFF;
+    --xh: #FF3DA5;
     --box: #F5C518;
 
     --radius: 16px;
@@ -391,7 +392,7 @@
   <header class="hero">
     <div>
       <h1 class="hero-title">The <span class="year">2026</span> Grid<br>Racing &amp; Boxing Calendar</h1>
-      <p class="hero-sub">Every round of F1, MotoGP, Formula E, the WEC (incl. Le Mans), GT World Challenge Europe and the WRC — plus the biggest nights in boxing. Tap any day for details.</p>
+      <p class="hero-sub">Every round of F1, MotoGP, Formula E, the WEC (incl. Le Mans), GT World Challenge Europe, the WRC and the FIA Extreme H World Cup — plus the biggest nights in boxing. Tap any day for details.</p>
     </div>
     <div class="hero-stats" id="heroStats"></div>
   </header>
@@ -437,6 +438,7 @@ const SERIES = {
   wec:    { name: "WEC / Le Mans",       short: "WEC",    color: "#22C55E" },
   gt:     { name: "GT World Challenge",  short: "GTWC",   color: "#B072FF" },
   wrc:    { name: "World Rally (WRC)",   short: "WRC",    color: "#4C6FFF" },
+  xh:     { name: "Extreme H",           short: "XH",     color: "#FF3DA5" },
   box:    { name: "Boxing",              short: "Boxing", color: "#F5C518" },
 };
 
@@ -546,6 +548,10 @@ const EVENTS = [
   { d:"2026-09-13", s:"wrc", t:"Rally Chile",          loc:"Concepción, Biobío", tag:"Gravel · 10–13 Sep" },
   { d:"2026-10-04", s:"wrc", t:"Rally Italia Sardegna", loc:"Alghero, Sardinia", tag:"Gravel · 1–4 Oct" },
   { d:"2026-11-14", s:"wrc", t:"Rally Saudi Arabia",   loc:"Jeddah, Saudi Arabia", tag:"Gravel · 11–14 Nov · Finale" },
+
+  // ---------------- FIA Extreme H World Cup (2026) ----------------
+  // Successor to Extreme E, which ran its final season in 2024.
+  { d:"2026-10-31", s:"xh", t:"Qiddiya World Cup", loc:"Qiddiya City, Saudi Arabia", tag:"Sole 2026 round · 29–31 Oct" },
 
   // ---------------- Boxing — major cards (2026) ----------------
   { d:"2026-06-27", s:"box", t:"Zayas vs. Ennis",     loc:"Unified super-welterweight titles" },
