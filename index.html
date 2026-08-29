@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>2026 Racing &amp; Boxing Calendar</title>
+<title>2026 Racing, Boxing &amp; Football Calendar</title>
 <style>
   :root {
     --bg: #07080c;
@@ -24,6 +24,7 @@
     --wrc: #4C6FFF;
     --xh: #FF3DA5;
     --box: #F5C518;
+    --ucl: #C9D6FF;
 
     --radius: 16px;
     --radius-sm: 10px;
@@ -391,8 +392,8 @@
 <div class="wrap">
   <header class="hero">
     <div>
-      <h1 class="hero-title">The <span class="year">2026</span> Grid<br>Racing &amp; Boxing Calendar</h1>
-      <p class="hero-sub">Every round of F1, MotoGP, Formula E, the WEC (incl. Le Mans), GT World Challenge Europe, the WRC and the FIA Extreme H World Cup — plus the biggest nights in boxing. Tap any day for details.</p>
+      <h1 class="hero-title">The <span class="year">2026</span> Grid<br>Racing, Boxing &amp; Football Calendar</h1>
+      <p class="hero-sub">Every round of F1, MotoGP, Formula E, the WEC (incl. Le Mans), GT World Challenge Europe, the WRC and the FIA Extreme H World Cup — plus every UEFA Champions League matchday and the biggest nights in boxing. Tap any day for details.</p>
     </div>
     <div class="hero-stats" id="heroStats"></div>
   </header>
@@ -417,6 +418,7 @@
 
   <footer>
     <p class="legend-note">Full 2026 seasons as officially published. Formula E Season 12 opens in São Paulo on 6 Dec 2025.</p>
+    <p class="legend-note">Champions League entries mark a whole matchday rather than a single fixture; the 2026/27 league phase draw was made on 27 Aug 2026.</p>
     <p>Boxing bouts are subject to change. Dates verified against official series calendars &amp; press reports, August 2026.</p>
   </footer>
 </div>
@@ -440,6 +442,7 @@ const SERIES = {
   wrc:    { name: "World Rally (WRC)",   short: "WRC",    color: "#4C6FFF" },
   xh:     { name: "Extreme H",           short: "XH",     color: "#FF3DA5" },
   box:    { name: "Boxing",              short: "Boxing", color: "#F5C518" },
+  ucl:    { name: "Champions League",    short: "UCL",    color: "#C9D6FF" },
 };
 
 // date: YYYY-MM-DD  | series key | title (short) | loc | tag (optional)
@@ -566,6 +569,46 @@ const EVENTS = [
   { d:"2026-09-04", s:"box", t:"Ruiz vs. Knyba",      loc:"Heavyweight · Newark, New Jersey" },
   { d:"2026-09-12", s:"box", t:"Garcia vs. Benn",     loc:"WBC welterweight title · Las Vegas" },
   { d:"2026-10-31", s:"box", t:"Mbilli vs. Canelo",   loc:"WBC super-middleweight title · Riyadh", tag:"Moved from 12 Sep" },
+
+  // ---------------- UEFA Champions League ----------------
+  // Entries mark a whole matchday (Tue/Wed, plus Thu in an exclusive week), not a single fixture.
+  // --- 2025/26: league phase finale, knockouts, Budapest final ---
+  { d:"2025-12-09", s:"ucl", t:"League Phase MD6",         loc:"Across Europe · 2025/26 league phase" },
+  { d:"2025-12-10", s:"ucl", t:"League Phase MD6",         loc:"Across Europe · 2025/26 league phase" },
+  { d:"2026-01-20", s:"ucl", t:"League Phase MD7",         loc:"Across Europe · 2025/26 league phase" },
+  { d:"2026-01-21", s:"ucl", t:"League Phase MD7",         loc:"Across Europe · 2025/26 league phase" },
+  { d:"2026-01-28", s:"ucl", t:"League Phase MD8",         loc:"Across Europe · 2025/26 league phase", tag:"All 18 matches kick off at 21:00" },
+  { d:"2026-02-17", s:"ucl", t:"Play-offs · 1st legs",     loc:"Knockout phase play-offs · 2025/26" },
+  { d:"2026-02-18", s:"ucl", t:"Play-offs · 1st legs",     loc:"Knockout phase play-offs · 2025/26" },
+  { d:"2026-02-24", s:"ucl", t:"Play-offs · 2nd legs",     loc:"Knockout phase play-offs · 2025/26" },
+  { d:"2026-02-25", s:"ucl", t:"Play-offs · 2nd legs",     loc:"Knockout phase play-offs · 2025/26" },
+  { d:"2026-03-10", s:"ucl", t:"Round of 16 · 1st legs",   loc:"Across Europe · 2025/26" },
+  { d:"2026-03-11", s:"ucl", t:"Round of 16 · 1st legs",   loc:"Across Europe · 2025/26" },
+  { d:"2026-03-17", s:"ucl", t:"Round of 16 · 2nd legs",   loc:"Across Europe · 2025/26" },
+  { d:"2026-03-18", s:"ucl", t:"Round of 16 · 2nd legs",   loc:"Across Europe · 2025/26" },
+  { d:"2026-04-07", s:"ucl", t:"Quarter-finals · 1st legs", loc:"Across Europe · 2025/26" },
+  { d:"2026-04-08", s:"ucl", t:"Quarter-finals · 1st legs", loc:"Across Europe · 2025/26" },
+  { d:"2026-04-14", s:"ucl", t:"Quarter-finals · 2nd legs", loc:"Across Europe · 2025/26" },
+  { d:"2026-04-15", s:"ucl", t:"Quarter-finals · 2nd legs", loc:"Across Europe · 2025/26" },
+  { d:"2026-04-28", s:"ucl", t:"Semi-finals · 1st legs",   loc:"Across Europe · 2025/26" },
+  { d:"2026-04-29", s:"ucl", t:"Semi-finals · 1st legs",   loc:"Across Europe · 2025/26" },
+  { d:"2026-05-05", s:"ucl", t:"Semi-finals · 2nd legs",   loc:"Across Europe · 2025/26" },
+  { d:"2026-05-06", s:"ucl", t:"Semi-finals · 2nd legs",   loc:"Across Europe · 2025/26" },
+  { d:"2026-05-30", s:"ucl", t:"Champions League Final",   loc:"Puskás Aréna, Budapest", tag:"2025/26 final · Saturday" },
+  // --- 2026/27: league phase (draw made 27 Aug 2026) ---
+  { d:"2026-09-08", s:"ucl", t:"League Phase MD1",         loc:"Across Europe · 2026/27 league phase", tag:"Exclusive week · 8–10 Sep" },
+  { d:"2026-09-09", s:"ucl", t:"League Phase MD1",         loc:"Across Europe · 2026/27 league phase", tag:"Exclusive week · 8–10 Sep" },
+  { d:"2026-09-10", s:"ucl", t:"League Phase MD1",         loc:"Across Europe · 2026/27 league phase", tag:"Exclusive week · 8–10 Sep" },
+  { d:"2026-10-13", s:"ucl", t:"League Phase MD2",         loc:"Across Europe · 2026/27 league phase" },
+  { d:"2026-10-14", s:"ucl", t:"League Phase MD2",         loc:"Across Europe · 2026/27 league phase" },
+  { d:"2026-10-20", s:"ucl", t:"League Phase MD3",         loc:"Across Europe · 2026/27 league phase" },
+  { d:"2026-10-21", s:"ucl", t:"League Phase MD3",         loc:"Across Europe · 2026/27 league phase" },
+  { d:"2026-11-03", s:"ucl", t:"League Phase MD4",         loc:"Across Europe · 2026/27 league phase" },
+  { d:"2026-11-04", s:"ucl", t:"League Phase MD4",         loc:"Across Europe · 2026/27 league phase" },
+  { d:"2026-11-24", s:"ucl", t:"League Phase MD5",         loc:"Across Europe · 2026/27 league phase" },
+  { d:"2026-11-25", s:"ucl", t:"League Phase MD5",         loc:"Across Europe · 2026/27 league phase" },
+  { d:"2026-12-08", s:"ucl", t:"League Phase MD6",         loc:"Across Europe · 2026/27 league phase" },
+  { d:"2026-12-09", s:"ucl", t:"League Phase MD6",         loc:"Across Europe · 2026/27 league phase" },
 ];
 
 const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
