@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>2026 Racing, Boxing &amp; Football Calendar</title>
+<title>2026 Racing, Combat &amp; Football Calendar</title>
 <style>
   :root {
     --bg: #07080c;
@@ -25,6 +25,7 @@
     --xh: #FF3DA5;
     --box: #F5C518;
     --ucl: #C9D6FF;
+    --glory: #A3E635;
 
     --radius: 16px;
     --radius-sm: 10px;
@@ -392,7 +393,7 @@
 <div class="wrap">
   <header class="hero">
     <div>
-      <h1 class="hero-title">The <span class="year">2026</span> Grid<br>Racing, Boxing &amp; Football Calendar</h1>
+      <h1 class="hero-title">The <span class="year">2026</span> Grid<br>Racing, Combat &amp; Football Calendar</h1>
       <p class="hero-sub">Every round of F1, MotoGP, Formula E, the WEC (incl. Le Mans), GT World Challenge Europe, the WRC and the FIA Extreme H World Cup — plus every UEFA Champions League fixture and the biggest nights in boxing. Tap any day for details.</p>
     </div>
     <div class="hero-stats" id="heroStats"></div>
@@ -443,6 +444,7 @@ const SERIES = {
   xh:     { name: "Extreme H",           short: "XH",     color: "#FF3DA5" },
   box:    { name: "Boxing",              short: "Boxing", color: "#F5C518" },
   ucl:    { name: "Champions League",    short: "UCL",    color: "#C9D6FF" },
+  glory:  { name: "GLORY Kickboxing",    short: "GLORY",  color: "#A3E635" },
 };
 
 // date: YYYY-MM-DD  | series key | title (short) | loc | tag (optional)
@@ -791,6 +793,18 @@ const EVENTS = [
   { d:"2026-12-09", s:"ucl", t:"Real Betis vs Como", loc:"La Cartuja, Seville", tag:"2026/27 MD6 · 18:45 CET" },
   { d:"2026-12-09", s:"ucl", t:"Slovan Bratislava vs Shakhtar", loc:"Tehelné pole, Bratislava", tag:"2026/27 MD6 · 18:45 CET" },
   { d:"2026-12-09", s:"ucl", t:"Stuttgart vs Lille", loc:"MHPArena, Stuttgart", tag:"2026/27 MD6 · 21:00 CET" },
+
+  // ---------------- GLORY Kickboxing ----------------
+  { d:"2025-12-13", s:"glory", t:"Collision 8: Plazibat vs Mahieddine", loc:"GelreDome, Arnhem, Netherlands", tag:"Last Heavyweight Standing" },
+  { d:"2026-02-07", s:"glory", t:"GLORY 105",                loc:"GelreDome, Arnhem, Netherlands", tag:"Last Heavyweight Standing finals" },
+  { d:"2026-03-28", s:"glory", t:"GLORY 106",                loc:"Ryōgoku Kokugikan, Tokyo, Japan", tag:"With RISE" },
+  { d:"2026-04-25", s:"glory", t:"GLORY 107",                loc:"RTM Stage, Rotterdam, Netherlands", tag:"Middleweight title · Kwasi" },
+  { d:"2026-06-06", s:"glory", t:"GLORY 108",                loc:"Ota City General Gymnasium, Tokyo, Japan", tag:"With RISE" },
+  { d:"2026-06-13", s:"glory", t:"Collision 9: Kromah vs Cvjetićanin", loc:"Rotterdam Ahoy, Netherlands", tag:"Heavyweight title · LHW Grand Prix" },
+  { d:"2026-09-05", s:"glory", t:"GLORY 109",                loc:"RTM Stage, Rotterdam, Netherlands", tag:"Welterweight title · Kwasi vs Hristov" },
+  { d:"2026-10-17", s:"glory", t:"GLORY 110",                loc:"Lotto Arena, Antwerp, Belgium" },
+  { d:"2026-11-28", s:"glory", t:"GLORY Rivals 6",           loc:"Maaspoort, Den Bosch, Netherlands", tag:"With RingFight Promotions" },
+  { d:"2026-12-12", s:"glory", t:"Collision 10: Kromah vs Plazibat", loc:"GelreDome, Arnhem, Netherlands", tag:"Heavyweight title" },
 ];
 
 const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
